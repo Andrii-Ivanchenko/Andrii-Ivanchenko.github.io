@@ -1,22 +1,67 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <script src="/script/index.js" defer></script>
-<link rel="stylesheet" href="./style/style.css">
-    <title>Document</title>
-</head>
-
-<body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./style/reset.css" />
+    <link rel="stylesheet" href="./style/style.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Ubuntu&display=swap" rel="stylesheet">
+<script src="./Script/index.js" defer></script>
+    <script
+      src="https://kit.fontawesome.com/7effe4df3b.js"
+      crossorigin="anonymous"
+    ></script>
+    <title>Sign-up Form</title>
+  </head>
+  <body>
+    <header class="top-ribbon">
+      <a href="#" class="logo"><h1 class="logo-heading">Hubject</h1></a>
+    </header>
     <main>
-        <section>
-            <!-- The `multiple` attribute lets users select multiple files. -->
-<input type="file" name="FilePicker" class="fileSelector">
-        </section>
+        <form class="form-container">
+          <div class="signin-options flex-container">
+          </div>
+          <div class="hubject-logo-image"><svg width="240" height="60" viewBox="0 0 240 60" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path fill-rule="evenodd" clip-rule="evenodd" d="M89.8729 48.5429H80.9155V55.7141H77.8379V38.5713H80.9155V45.6456H89.8729V38.5713H92.973V55.7141H89.8729V48.5429Z" fill="#39494C"/>
+            <path fill-rule="evenodd" clip-rule="evenodd" d="M113.679 47.9233V38.5713H116.756V48.1366C116.756 52.3511 114.141 55.7141 109.212 55.7141C104.12 55.7141 101.621 52.3986 101.621 48.1366V38.5713H104.746V47.9233C104.746 50.8121 106.319 52.7535 109.212 52.7535C112.059 52.7535 113.679 50.8121 113.679 47.9233Z" fill="#39494C"/>
+            <path fill-rule="evenodd" clip-rule="evenodd" d="M128.557 48.2542V52.9632H134.239C136.293 52.9632 137.271 52.1166 137.271 50.5958C137.271 49.0749 136.293 48.2542 134.239 48.2542H128.557ZM128.557 41.3241V45.5259H134.12C135.91 45.5259 136.865 44.801 136.865 43.4255C136.865 41.9758 135.935 41.3241 134.12 41.3241H128.557ZM125.406 38.5713H134.478C138.154 38.5713 140.159 40.3334 140.159 43.206C140.159 45.0424 138.894 46.2487 137.604 46.6828C139.182 47.1664 140.541 48.5677 140.541 50.8123C140.541 53.8066 138.536 55.7141 134.621 55.7141H125.406V38.5713Z" fill="#39494C"/>
+            <path fill-rule="evenodd" clip-rule="evenodd" d="M155.599 55.7141C151.568 55.7141 149.189 53.6041 149.189 49.953V45.4473H152.55V49.7636C152.55 51.5649 153.636 52.7738 155.599 52.7738C157.615 52.7738 158.7 51.5649 158.7 49.7636V38.5713H162.162V49.953C162.162 53.5798 159.656 55.7141 155.599 55.7141Z" fill="#39494C"/>
+            <path fill-rule="evenodd" clip-rule="evenodd" d="M196.756 47.1432C196.756 42.2853 200.521 38.5713 205.743 38.5713C211.242 38.5713 213.577 42.0051 214.053 43.9439H210.589C210.086 43.0562 208.581 41.4446 205.743 41.4446C202.379 41.4446 200.244 44.0376 200.244 47.1432C200.244 50.2489 202.379 52.8419 205.743 52.8419C208.857 52.8419 210.163 51.1594 210.64 50.3197H214.053C213.626 52.071 211.468 55.7141 205.743 55.7141C200.521 55.7141 196.756 52.0012 196.756 47.1432Z" fill="#39494C"/>
+            <path fill-rule="evenodd" clip-rule="evenodd" d="M222.703 38.5713H240V41.4676H233.012V55.7141H229.691V41.4676H222.703V38.5713Z" fill="#39494C"/>
+            <path fill-rule="evenodd" clip-rule="evenodd" d="M179.442 41.2547C181.986 41.2547 183.878 42.699 184.634 45.2459H174.18C174.834 42.8028 176.724 41.2547 179.442 41.2547ZM179.711 52.8224C176.614 52.8224 174.439 50.6885 174.003 47.8512H188.108C188.105 42.2826 184.427 38.5713 179.442 38.5713C174.455 38.5713 170.811 42.3214 170.811 47.4802C170.816 47.8764 170.828 47.8879 170.828 47.8879C171.328 52.3476 174.868 55.7141 179.711 55.7141C185.424 55.7141 187.628 51.8927 187.868 50.4474H184.771C184.461 50.9977 183.153 52.8224 179.711 52.8224Z" fill="#39494C"/>
+            <path fill-rule="evenodd" clip-rule="evenodd" d="M0 34.0072L60.5405 0V25.9349L0 60V34.0072Z" fill="#1D91A2"/>
+            </svg>
+            </div>
+            <section class="main-content-container">
+          <div class="file-upload-button container">
+            <button class="submit-button">Upload JSON File </button>
+            <input type="file" class="file-selector">
+        </div>
+        <div class="loading-spinner-container mode-inactive container">
+            <div class="loadingio-spinner-spinner-xdr1unur1ud mode-inactive loading-spinner">
+              <div class="ldio-kzakjoo55ys">
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+                <div></div>
+              </div>
+            </div>
+          </div>
+  
+        <div class="container status-container">
+            <p class="status-text"></p>
+        </div>
+    </section>
+        </form>
     </main>
-</body>
-
+  </body>
 </html>

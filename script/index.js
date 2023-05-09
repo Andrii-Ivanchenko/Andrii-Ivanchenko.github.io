@@ -11,7 +11,11 @@ fileUploadButton.addEventListener("change",(event)=>{
         reader.addEventListener('load',()=>{
             const readFile = reader.result;
             const parsedJson = JSON.parse(readFile)
-            console.log (deepCheck(parsedJson))
+        const resultArray = (deepCheck(parsedJson))
+        let resultString ="";
+        resultArray.forEach(obj => {
+        });
+        console.log (deepCheck(parsedJson))
         })
         }
         function deepCheck(parsedJson, results) {

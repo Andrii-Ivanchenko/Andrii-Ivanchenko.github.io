@@ -222,10 +222,6 @@ body {
   .ldio-kzakjoo55ys div {
     box-sizing: content-box;
   }
-  
-  .mode-inactive {
-    display: none;
-  }
   .main-content-container{
     height: 400px; 
     display: flex;

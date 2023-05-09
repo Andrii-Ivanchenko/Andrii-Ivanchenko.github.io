@@ -6,12 +6,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="./style/reset.css" />
     <link rel="stylesheet" href="./style/style.css" />
+    <link rel="stylesheet" href="./style/loading-squares.css">
     <link href="https://fonts.googleapis.com/css2?family=Ubuntu&display=swap" rel="stylesheet">
 <script src="./Script/index.js" defer></script>
-    <script
-      src="https://kit.fontawesome.com/7effe4df3b.js"
-      crossorigin="anonymous"
-    ></script>
     <title>Sign-up Form</title>
   </head>
   <body>
@@ -20,8 +17,6 @@
     </header>
     <main>
         <form class="form-container">
-          <div class="signin-options flex-container">
-          </div>
           <div class="hubject-logo-image"><svg width="240" height="60" viewBox="0 0 240 60" fill="none" xmlns="http://www.w3.org/2000/svg">
             <path fill-rule="evenodd" clip-rule="evenodd" d="M89.8729 48.5429H80.9155V55.7141H77.8379V38.5713H80.9155V45.6456H89.8729V38.5713H92.973V55.7141H89.8729V48.5429Z" fill="#39494C"/>
             <path fill-rule="evenodd" clip-rule="evenodd" d="M113.679 47.9233V38.5713H116.756V48.1366C116.756 52.3511 114.141 55.7141 109.212 55.7141C104.12 55.7141 101.621 52.3986 101.621 48.1366V38.5713H104.746V47.9233C104.746 50.8121 106.319 52.7535 109.212 52.7535C112.059 52.7535 113.679 50.8121 113.679 47.9233Z" fill="#39494C"/>
@@ -34,29 +29,20 @@
             </svg>
             </div>
             <section class="main-content-container">
+                <div class="container">
+                    <div class="loadingspinner ">
+                      <div id="square1" class=""></div>
+                      <div id="square2" class=""></div>
+                      <div id="square3" class=""></div>
+                      <div id="square4" class=""></div>
+                      <div id="square5" class=""></div>
+                    </div>
+                  </div>
           <div class="file-upload-button container">
             <button class="submit-button">Upload JSON File </button>
             <input type="file" class="file-selector">
         </div>
-        <div class="loading-spinner-container mode-inactive container">
-            <div class="loadingio-spinner-spinner-xdr1unur1ud mode-inactive loading-spinner">
-              <div class="ldio-kzakjoo55ys">
-                <div></div>
-                <div></div>
-                <div></div>
-                <div></div>
-                <div></div>
-                <div></div>
-                <div></div>
-                <div></div>
-                <div></div>
-                <div></div>
-                <div></div>
-                <div></div>
-              </div>
-            </div>
-          </div>
-  
+        
         <div class="container status-container">
             <p class="status-text"></p>
         </div>

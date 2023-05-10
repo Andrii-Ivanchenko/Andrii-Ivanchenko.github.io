@@ -228,3 +228,5 @@ body {
     flex-direction: column;
     justify-content: end;
   }
+  .inactive{
+    display: none;

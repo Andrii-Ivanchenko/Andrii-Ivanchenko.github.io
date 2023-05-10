@@ -1,4 +1,5 @@
 const reader = new FileReader();
+const mainContentSection = document.querySelector(".main-content-container")
 if (window.FileList && window.File && window.FileReader) {
 const fileUploadButton = document.querySelector(".file-selector");
 fileUploadButton.addEventListener("change",(event)=>{
@@ -9,13 +10,48 @@ fileUploadButton.addEventListener("change",(event)=>{
 }
     function readContent (){
         reader.addEventListener('load',()=>{
+          mainContentSection.querySelector(".file-upload-button").classList.add("inactive");
+          document.querySelector(".loading-spinner").classList.remove("inactive");
+          setTimeout(() => {
+            document.querySelector(".loading-spinner").classList.add("inactive");
+          }, 3000);
+
             const readFile = reader.result;
-            const parsedJson = JSON.parse(readFile)
-        const resultArray = (deepCheck(parsedJson))
-        let resultString ="";
+            const parsedJson = JSON.parse(readFile) //converting string into JS object
+        const resultArray = (deepCheck(parsedJson)) //function call to process the JSON
+        let resultString ="NUMBER;EVSEID;EVSESTATUS\n";//completing the CSV format
+        let counter=0;
         resultArray.forEach(obj => {
+          counter++;
+          let entries = Object.entries(obj)
+let data = entries.map( ([key, val] = entry) => {
+    if(key==="EvseID"){
+    resultString = resultString + `${counter};${val};`
+  }
+  else{
+    resultString = resultString + `${val}\n`;}
+});
+
         });
+        console.log (resultString)
         console.log (deepCheck(parsedJson))
+        function download(data, filename, type) {
+          var file = new Blob([data], {type: type});
+          if (window.navigator.msSaveOrOpenBlob) // IE10+
+              window.navigator.msSaveOrOpenBlob(file, filename);
+          else { // Others
+              var a = document.createElement("a"),
+                      url = URL.createObjectURL(file);
+              a.href = url;
+              a.download = filename;
+              document.body.appendChild(a);
+              a.click();
+              setTimeout(function() {
+                  document.body.removeChild(a);
+                  window.URL.revokeObjectURL(url);  
+              }, 0); 
+          }
+      }
         })
         }
         function deepCheck(parsedJson, results) {

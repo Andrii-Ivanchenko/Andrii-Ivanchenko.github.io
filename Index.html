@@ -29,6 +29,9 @@
             </svg>
             </div>
             <section class="main-content-container">
+              <div class="download-button-container container">
+                <button class="action-button download-button inactive">Download CSV File</button>
+              </div>
                 <div class="container loading-spinner inactive">
                     <div class="loadingspinner ">
                       <div id="square1" class=""></div>
@@ -39,12 +42,11 @@
                     </div>
                   </div>
           <div class="file-upload-button container">
-            <button class="submit-button">Upload JSON File </button>
+            <button class="action-button">Upload JSON File </button>
             <input type="file" class="file-selector">
         </div>
-        
         <div class="container status-container">
-            <p class="status-text"></p>
+            <p class="status-text waiting-for-input">Waiting for File Input</p>
         </div>
     </section>
         </form>
